@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import clinic from '../assets/images/clinic.jpg'
+import coverage from '../assets/images/coverage.jpg'
 import optical from '../assets/images/optical.jpg'
 import splash from '../assets/images/splash.jpg'
 import { doctors } from '@/data/doctors'
 import { infoBlocks } from '@/data/infoBlocks'
+import { acceptedInsurances } from '@/data/insurances'
 
 export default function Home() {
   return (
@@ -57,6 +59,29 @@ export default function Home() {
             </div>
          </div>
       </section>
+      <section className='w-full text-center text-white bg-blue-400 pb-16 text-xl flex flex-col gap-4 items-center'>
+        <div className='w-full h-full max-h-[600px] overflow-hidden flex justify-center' id='coverage'>
+          <Image
+            src={coverage} alt='coverage'
+            className='object-cover w-full'
+            height={0} width={0} sizes='100vw'
+            priority
+          />
+        </div>
+        <div className='px-20 pt-4 flex flex-col gap-12 w-2/3' >
+          <h1 className='text-6xl'>Insurances We Accept</h1>
+          <ul className='grid grid-cols-3 gap-4'>
+            {acceptedInsurances.map((insurance, index) => (
+              <li key={index} className='text-xl flex items-center'>
+                <span className='mr-2'>•</span>
+                <a href={insurance.url} className='underline hover:text-blue-500' target='_blank' rel='noopener noreferrer'>
+                  {insurance.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <section className='w-full text-center text-white bg-blue-800 pb-40 text-xl flex flex-col gap-4 items-center'>
         <div className='w-full h-full max-h-[800px] overflow-hidden flex justify-center'>
           <Image
@@ -66,7 +91,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className='px-20 pt-20 flex flex-col gap-8 w-2/3'>
+        <div className='px-20 pt-20 flex flex-col gap-8 w-2/3' id='optical'>
           <h1 className='text-6xl'>Welcome to Our Optical Shop</h1>
           <p>Discover a world of stylish eyewear and professional eye care services at our optical shop. We are dedicated to providing you with top-quality eyeglasses, sunglasses, and contact lenses that suit your unique style and vision needs.</p>
           <p>Our experienced opticians are here to assist you in finding the perfect eyewear and ensuring a comfortable fit. Whether you&apos;re looking for fashion-forward frames or advanced lens technologies, we have a wide selection to meet your preferences.</p>
@@ -85,7 +110,7 @@ export default function Home() {
               <h1 className='text-5xl'>{doctor.name}</h1>
               <p className='text-xl'>{doctor.bio}</p>
             </div>
-            <div className='w-[400px] h-[400px] rounded-full overflow-hidden shadow-xl'>
+            <div className='w-[400px] h-[400px] rounded-full overflow-hidden shadow-2xl'>
               <Image
                 src={doctor.image} alt={doctor.name}
                 className='object-cover w-full'

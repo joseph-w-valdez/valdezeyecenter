@@ -9,7 +9,7 @@ export const infoBlocks = [
     text2: 'Whether you have private insurance, government coverage, or are self-paying, we have solutions to accommodate your needs and preferences.',
     icon: insuranceIcon,
     linkText: 'CHECK COVERAGE',
-    linkHref: '/'
+    linkHref: '#coverage'
   },
   {
     title: 'High-Quality Eyewear',
@@ -17,7 +17,7 @@ export const infoBlocks = [
     text2: 'From classic designs to the latest trends, we have eyewear options that cater to diverse tastes.',
     icon: glassesIcon,
     linkText: 'VIEW OUR BRANDS',
-    linkHref: '/'
+    linkHref: '#optical'
   },
   {
     title: 'Our Doctors',
@@ -25,6 +25,6 @@ export const infoBlocks = [
     text2: 'We believe that building a strong doctor-patient relationship is the foundation of exceptional eye care, and our doctors are committed to providing you with the highest quality of service.',
     icon: doctorsIcon,
     linkText: 'MEET OUR DOCTORS',
-    linkHref: '/'
+    linkHref: '#doctors'
   }
 ];
