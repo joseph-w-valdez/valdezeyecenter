@@ -1,55 +1,29 @@
 import Image from 'next/image'
-import splash from '../assets/images/splash.jpg'
 import Link from 'next/link'
-import insuranceIcon from '../assets/images/insurance.png'
-import glassesIcon from '../assets/images/glasses.png'
-import doctorsIcon from '../assets/images/doctors.png'
-
-const divContent = [
-  {
-    title: 'We welcome many insurances!',
-    text1: 'At ValdezEyeCenter, we proudly welcome all insurances and provide affordable options for all our patients. Our dedicated team works tirelessly to ensure that you can access the eye care you need without any financial burdens.',
-    text2: 'Whether you have private insurance, government coverage, or are self-paying, we have solutions to accommodate your needs and preferences.',
-    icon: insuranceIcon,
-    linkText: 'CHECK COVERAGE',
-    linkHref: '/'
-  },
-  {
-    title: 'High-Quality Eyewear',
-    text1: 'As a leading provider of eye health services, we offer a comprehensive selection of popular glasses and brands for every budget and lifestyle. Our expert opticians are passionate about helping you find the perfect eyewear that not only enhances your vision but also complements your style.',
-    text2: 'From classic designs to the latest trends, we have eyewear options that cater to diverse tastes.',
-    icon: glassesIcon,
-    linkText: 'VIEW OUR BRANDS',
-    linkHref: '/'
-  },
-  {
-    title: 'Our Doctors',
-    text1: 'At ValdezEyeCenter, we understand the importance of personalized care. Our experienced and highly-trained doctors are dedicated to working closely with you to create a Stay Well Care Plan - a personalized wellness plan that addresses your unique eye health needs.',
-    text2: 'We believe that building a strong doctor-patient relationship is the foundation of exceptional eye care, and our doctors are committed to providing you with the highest quality of service.',
-    icon: doctorsIcon,
-    linkText: 'MEET OUR DOCTORS',
-    linkHref: '/'
-  }
-];
+import clinic from '../assets/images/clinic.jpg'
+import optical from '../assets/images/optical.jpg'
+import splash from '../assets/images/splash.jpg'
+import { doctors } from '@/data/doctors'
+import { infoBlocks } from '@/data/infoBlocks'
 
 export default function Home() {
   return (
     <main className="w-full flex flex-wrap justify-center">
-      <div className='w-full h-full max-h-[800px] overflow-hidden flex justify-center'>
+      <section className='w-full h-full max-h-[800px] overflow-hidden flex justify-center'>
         <Image
           src={splash} alt='splash image'
           className='object-cover w-full'
           height={0} width={0} sizes='100vw'
           priority
         />
-      </div>
-      <div className='w-full text-center text-white bg-gray-500 py-40 text-5xl'>
+      </section>
+      <section className='w-full text-center text-white bg-gray-500 py-40 text-5xl'>
         <h1>Helping You See the Path to Eye Care Excellence!</h1>
-      </div>
-      <div className='w-full text-center py-40'>
+      </section>
+      <section className='w-full text-center py-40'>
         <h1 className='text-5xl'>Our Patient-Focused Approach</h1>
         <div className='flex mt-12 text-center'>
-          {divContent.map((content, index) => (
+          {infoBlocks.map((content, index) => (
             <div key={index} className='mt-12 w-1/3 flex flex-col items-center gap-8'>
               <div className='mb-4'>
                 <Image
@@ -66,7 +40,62 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
+      <section className='bg-[#F5F3F2] flex justify-evenly py-24 px-20'>
+         <div className='flex flex-col w-1/3 gap-8'>
+          <h1 className='text-6xl'>Experience Top-Quality Eye Care</h1>
+          <p className='text-xl'>At our clinic, we&apos;re dedicated to providing you with the highest standard of eye care services. Our expert teams are committed to delivering personalized care and top-quality treatments to ensure your eye health is our top priority. With a strong emphasis on advanced technologies and a patient-centered approach, we're here to help you achieve and maintain optimal vision, so you can experience life with clarity and confidence.</p>
+         </div>
+         <div className='w-1/2 flex justify-center'>
+            <div className='w-[600px] h-[600px] rounded-full overflow-hidden'>
+              <Image
+                src={clinic} alt='clinic'
+                className='object-cover h-full'
+                height={0} width={0} sizes='100vw'
+                priority
+              />
+            </div>
+         </div>
+      </section>
+      <section className='w-full text-center text-white bg-blue-800 pb-40 text-xl flex flex-col gap-4 items-center'>
+        <div className='w-full h-full max-h-[800px] overflow-hidden flex justify-center'>
+          <Image
+            src={optical} alt='optical'
+            className='object-cover w-full'
+            height={0} width={0} sizes='100vw'
+            priority
+          />
+        </div>
+        <div className='px-20 pt-20 flex flex-col gap-8 w-2/3'>
+          <h1 className='text-6xl'>Welcome to Our Optical Shop</h1>
+          <p>Discover a world of stylish eyewear and professional eye care services at our optical shop. We are dedicated to providing you with top-quality eyeglasses, sunglasses, and contact lenses that suit your unique style and vision needs.</p>
+          <p>Our experienced opticians are here to assist you in finding the perfect eyewear and ensuring a comfortable fit. Whether you&apos;re looking for fashion-forward frames or advanced lens technologies, we have a wide selection to meet your preferences.</p>
+          <p>Visit our optical shop and experience the difference in clarity and style. We take pride in offering personalized service to help you see and look your best, enhancing both your vision and confidence.</p>
+        </div>
+      </section>
+      <section className='w-full bg-white p-20 flex flex-col gap-16' id='doctors'>
+        <h1 className='text-6xl text-center'>Meet Our Doctors!</h1>
+        {doctors.map((doctor, index) => (
+          <div
+            key={index}
+            className={`w-full flex justify-between p-20 items-center ${index % 2 !== 0 ? 'flex-row-reverse' : ''}`} // Apply flex-row-reverse class on odd-index doctors
+          >
+            <div className={`flex flex-col gap-8 w-1/3 ${index % 2 !== 0 ? 'text-right' : ''}`} // Align text to right on odd-index doctors
+            >
+              <h1 className='text-5xl'>{doctor.name}</h1>
+              <p className='text-xl'>{doctor.bio}</p>
+            </div>
+            <div className='w-[400px] h-[400px] rounded-full overflow-hidden shadow-xl'>
+              <Image
+                src={doctor.image} alt={doctor.name}
+                className='object-cover w-full'
+                height={0} width={0} sizes='100vw'
+                priority
+              />
+            </div>
+          </div>
+        ))}
+      </section>
     </main>
   )
 }
