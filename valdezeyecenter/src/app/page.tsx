@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main className="w-full flex flex-wrap justify-center">
       <BackToTopButton />
-      <section className='w-full h-full max-h-[800px] overflow-hidden flex justify-center' id='splash'>
+      <section className='w-full h-full max-h-[500px] overflow-hidden flex justify-center' id='splash'>
         <Image
           src={splash} alt='splash image'
           className='object-cover w-full'
@@ -48,7 +48,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className='w-full h-full max-h-[600px] overflow-hidden flex justify-center' id='spacer'>
+      <section className='w-full h-full max-h-[500px] overflow-hidden flex justify-center' id='spacer'>
         <Image
           src={flowers} alt='splash image'
           className='object-cover w-full'
@@ -73,7 +73,7 @@ export default function Home() {
          </div>
       </section>
       <section className='w-full text-center text-white bg-blue-400 pb-16 text-xl flex flex-col gap-4 items-center' id='coverage'>
-        <div className='w-full h-full max-h-[600px] overflow-hidden flex justify-center'>
+        <div className='w-full h-full max-h-[500px] overflow-hidden flex justify-center'>
           <Image
             src={coverage} alt='coverage'
             className='object-cover w-full'
@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </section>
       <section className='w-full text-center text-white bg-blue-800 text-xl flex flex-col gap-4 items-center' id='optical'>
-        <div className='w-full h-full max-h-[650px] overflow-hidden flex justify-center'>
+        <div className='w-full h-full max-h-[600px] overflow-hidden flex justify-center'>
           <Image
             src={optical} alt='optical'
             className='object-cover w-full'
@@ -150,7 +150,7 @@ export default function Home() {
               </div>
             </div>
             {index < doctors.length - 1 && (
-              <hr className="w-full bg-gray-300 h-1 shadow-xl" /> // Add a line break only between doctors
+              <hr className="w-full bg-gray-300 h-1" /> // Add a line break only between doctors
             )}
           </>
         ))}
