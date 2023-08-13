@@ -30,7 +30,7 @@ export default function Navbar() {
           </Link>
         ))}
       </div>
-      <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} onClose={handleCloseSidebar} />
+      <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
     </nav>
   )
 }
