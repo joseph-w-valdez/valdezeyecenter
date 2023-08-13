@@ -25,7 +25,7 @@ export default function Home() {
       <section className='w-full text-center text-white bg-black bg-opacity-90 py-16 md:py-40 text-2xl md:text-5xl px-4' id='slogan'>
         <h1>Helping You See the Path to Eye Care Excellence!</h1>
       </section>
-      <section className='w-full text-center py-16 md:py-40 text-2xl md:text-5xl' id='info-blocks'>
+      <section className='w-full text-center py-16 text-2xl md:text-5xl' id='info-blocks'>
         <h1>Our Patient-Focused Approach</h1>
         <div className='flex flex-wrap text-center'>
           {infoBlocks.map((content, index) => (
@@ -74,7 +74,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className='md:px-20 pt-4 flex flex-col gap-12 w-2/3' >
+        <div className='md:px-20 pt-16 flex flex-col gap-12 w-2/3' >
           <h1 className='text-2xl md:text-5xl'>Insurances We Accept</h1>
           <ul className='grid md:grid-cols-3 gap-4 text-start'>
             {acceptedInsurances.map((insurance, index) => (
