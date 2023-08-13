@@ -37,7 +37,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
   }, [isOpen]);
 
   return (
-    <div className={`fixed top-0 left-0 w-screen h-screen bg-black ${isOpen ? 'bg-opacity-50' : 'bg-opacity-0 h-0'}`}>
+    <div className={`fixed top-0 left-0 w-screen bg-black ${isOpen ? 'h-screen bg-opacity-50' : 'bg-opacity-0 h-0'}`}>
       <nav
         ref={sidebarRef}
         className={`fixed right-0 top-0 bg-blue-400 border-4 border-r-0 border-double border-white z-20 w-80 h-full transition-transform duration-500 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
