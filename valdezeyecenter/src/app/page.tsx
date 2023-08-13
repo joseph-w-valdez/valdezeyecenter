@@ -39,14 +39,14 @@ export default function Home() {
                 />
               </div>
               <h2 className='text-3xl'>{content.title}</h2>
-              <p className='text-lg w-full md:w-1/2'>{content.text1}</p>
-              <p className='text-lg w-full md:w-1/2'>{content.text2}</p>
+              <p className='text-lg w-full md:w-1/2 landscape:w-full landscape:px-4'>{content.text1}</p>
+              <p className='text-lg w-full md:w-1/2 landscape:w-full landscape:px-4'>{content.text2}</p>
               <Link href={content.linkHref} className='text-3xl underline hover:text-gray-500'>{content.linkText}</Link>
             </div>
           ))}
         </div>
       </section>
-      <section className='w-full bg-[#d3d3d3] flex flex-wrap justify-evenly px-4 md:py-24 md:px-20' id='clinic'>
+      <section className='w-full bg-[#d3d3d3] flex flex-wrap justify-evenly px-4 md:py-24 md:px-20 landscape:px-0 landscape:items-center' id='clinic'>
          <div className='flex flex-col w-full md:w-1/3'>
           <h1 className='py-20 md:py-24 text-center text-2xl md:text-5xl'>Experience Top-Quality Eye Care</h1>
           <p className='text-xl'>At our clinic, we&apos;re dedicated to providing you with the highest standard of eye care services. Our expert teams are
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
         <div className='md:px-20 pt-20 flex flex-col gap-12 w-2/3' >
           <h1 className='text-2xl md:text-5xl'>Insurances We Accept</h1>
-          <ul className='grid md:grid-cols-3 gap-4 text-start'>
+          <ul className='grid md:grid-cols-3 landscape:grid-cols-2 gap-4 text-start'>
             {acceptedInsurances.map((insurance, index) => (
               <li key={index} className='text-xl flex items-center'>
                 <span className='mr-2'>•</span>
@@ -109,7 +109,7 @@ export default function Home() {
         <div className='bg-blue-400 w-full flex justify-center px-4 md:px-20 pt-12 pb-20 text-start md:text-center'>
           <div className='flex flex-col gap-12 w-full md:w-2/3' >
             <h1 className='text-2xl md:text-5xl text-center'>Brands We Carry</h1>
-            <ul className='grid md:grid-cols-3 gap-4'>
+            <ul className='grid md:grid-cols-3 landscape:grid-cols-2 gap-4'>
               {eyeglassBrands.map((brand, index) => (
                 <li key={index} className='text-xl flex items-center'>
                   <span className='mr-2'>•</span>
@@ -134,7 +134,7 @@ export default function Home() {
             {/* Flip the orientation depending on even/odd index on mobile devices */}
             <div
               key={index}
-              className={`w-full flex flex-wrap justify-center md:justify-between md:p-20 items-center ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
+              className={`w-full flex flex-wrap justify-center md:justify-between md:p-20 landscape:px-0 items-center ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
             >
               <div className={`flex flex-col gap-8 w-full md:w-1/3 ${index % 2 !== 0 ? 'md:text-right' : ''}`}
               >
