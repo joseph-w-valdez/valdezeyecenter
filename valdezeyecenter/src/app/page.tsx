@@ -50,7 +50,10 @@ export default function Home() {
       <section className='bg-[#d3d3d3] flex justify-evenly py-24 px-20' id='clinic'>
          <div className='flex flex-col w-1/3 gap-8'>
           <h1 className='text-6xl'>Experience Top-Quality Eye Care</h1>
-          <p className='text-xl'>At our clinic, we&apos;re dedicated to providing you with the highest standard of eye care services. Our expert teams are committed to delivering personalized care and top-quality treatments to ensure your eye health is our top priority. With a strong emphasis on advanced technologies and a patient-centered approach, we're here to help you achieve and maintain optimal vision, so you can experience life with clarity and confidence.</p>
+          <p className='text-xl'>At our clinic, we&apos;re dedicated to providing you with the highest standard of eye care services. Our expert teams are
+          committed to delivering personalized care and top-quality treatments to ensure your eye health is our top priority. With a strong emphasis on
+          advanced technologies and a patient-centered approach, we&apos;re here to help you achieve and maintain optimal vision, so you can experience life with
+          clarity and confidence.</p>
          </div>
          <div className='w-1/2 flex justify-center'>
             <div className='w-[600px] h-[600px] rounded-full overflow-hidden'>
