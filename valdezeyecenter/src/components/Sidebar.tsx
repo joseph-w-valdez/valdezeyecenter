@@ -8,39 +8,14 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
-  const sidebarRef = useRef<HTMLDivElement | null>(null);
 
   const handleClose = () => {
     setIsOpen(false);
   };
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
-      handleClose();
-    }
-  };
-
-  // disable scrolling when the sidebar is open by hiding the overflow
-  useEffect(() => {
-    if (isOpen) {
-      document.addEventListener('click', handleClickOutside);
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.removeEventListener('click', handleClickOutside);
-      document.body.style.overflow = '';
-    }
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
-
   return (
-    <div className={`fixed top-0 left-0 w-screen bg-black ${isOpen ? 'h-screen bg-opacity-50' : 'bg-opacity-0 h-0'}`}>
       <nav
-        ref={sidebarRef}
-        className={`fixed right-0 top-0 bg-blue-400 border-4 border-r-0 border-double border-white z-20 w-80 h-full transition-transform duration-500 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed right-0 top-0 bg-blue-400 border-4 border-r-0 border-double border-white z-20 w-screen h-screen transition-transform duration-500 transform ${isOpen ? 'translate-x-0 xl:hidden' : 'translate-x-full'
           }`}
       >
         <div className="flex flex-col h-full m-6">
@@ -66,7 +41,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
           </div>
         </div>
       </nav>
-    </div>
   );
 };
 
