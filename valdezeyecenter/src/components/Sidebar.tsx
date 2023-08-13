@@ -20,6 +20,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
     };
   }, [isOpen]);
 
+  const sidebarContentRef = useRef<HTMLDivElement>(null); // Create a ref for the sidebar content
+
+  // Reset the scroll position of the sidebar content when isOpen changes
+  useEffect(() => {
+    if (isOpen && sidebarContentRef.current) {
+      sidebarContentRef.current.scrollTop = 0;
+    }
+  }, [isOpen]);
+
   const handleClose = () => {
     setIsOpen(false);
   };
@@ -29,7 +38,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
       className={`fixed right-0 top-0 bg-blue-400 border-4 border-r-0 border-double border-white z-20 w-screen h-screen transition-transform duration-500 transform ${isOpen ? 'translate-x-0 xl:hidden' : 'translate-x-full'
         }`}
     >
-      <div className="flex flex-col h-full m-6 overflow-y-scroll pb-16">
+      <div ref={sidebarContentRef} className="flex flex-col h-full m-6 overflow-y-scroll pb-16">
         <button className="fixed self-end text-white hover:bg-blue-800 py-1 px-4 rounded-lg" onClick={handleClose}>
           Close
         </button>
