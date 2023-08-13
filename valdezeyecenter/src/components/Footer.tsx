@@ -28,7 +28,7 @@ export default function Navbar() {
           <div><span>Sunday: </span><span>Closed</span></div>
         </div>
       </div>
-      <div className='bg-white w-full flex justify-start md:pl-20 py-2 text-black'><p>© 2023 ValdezEyeCenter. All rights reserved.</p></div>
+      <div className='bg-white w-full flex justify-start md:pl-20 pl-4 py-2 text-black'><p>© 2023 ValdezEyeCenter. All rights reserved.</p></div>
     </footer>
   )
 }

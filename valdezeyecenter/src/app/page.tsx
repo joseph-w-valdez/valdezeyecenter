@@ -22,7 +22,7 @@ export default function Home() {
           priority
         />
       </section>
-      <section className='w-full text-center text-white bg-black bg-opacity-90 py-16 md:py-40 text-2xl md:text-5xl' id='slogan'>
+      <section className='w-full text-center text-white bg-black bg-opacity-90 py-16 md:py-40 text-2xl md:text-5xl px-4' id='slogan'>
         <h1>Helping You See the Path to Eye Care Excellence!</h1>
       </section>
       <section className='w-full text-center py-16 md:py-40 text-2xl md:text-5xl' id='info-blocks'>
