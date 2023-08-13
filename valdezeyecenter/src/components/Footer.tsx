@@ -5,7 +5,7 @@ import logoFull from '../assets/images/logo-full.png'
 export default function Navbar() {
 
   return (
-    <footer className="w-full h-fit md:h-64 flex flex-wrap justify-center text-center border-t-4 border-double bg-blue-400 py-16" id='footer'>
+    <footer className="w-full h-fit md:h-64 flex flex-wrap justify-center text-center border-t-4 border-double bg-blue-400 py-20" id='footer'>
       <h1 className='text-3xl md:text-5xl'>Get started with ValdezEyeCenter</h1>
       <p className='w-full text-2xl md:text-4xl pt-4 px-4'>Schedule an appointment today!</p>
       <div className='w-full h-[1px] bg-white mx-12 mt-12'></div>
