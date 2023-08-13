@@ -22,10 +22,10 @@ export default function Home() {
           priority
         />
       </section>
-      <section className='w-full text-center text-white bg-black bg-opacity-90 py-16 md:py-40 text-2xl md:text-5xl px-4' id='slogan'>
+      <section className='w-full text-center text-white bg-black bg-opacity-90 py-20 md:py-40 text-2xl md:text-5xl px-4' id='slogan'>
         <h1>Helping You See the Path to Eye Care Excellence!</h1>
       </section>
-      <section className='w-full text-center py-16 text-2xl md:text-5xl' id='info-blocks'>
+      <section className='w-full text-center py-20 text-2xl md:text-5xl' id='info-blocks'>
         <h1>Our Patient-Focused Approach</h1>
         <div className='flex flex-wrap text-center'>
           {infoBlocks.map((content, index) => (
@@ -48,7 +48,7 @@ export default function Home() {
       </section>
       <section className='w-full bg-[#d3d3d3] flex flex-wrap justify-evenly px-4 md:py-24 md:px-20' id='clinic'>
          <div className='flex flex-col w-full md:w-1/3'>
-          <h1 className='py-16 md:py-24 text-center text-2xl md:text-5xl'>Experience Top-Quality Eye Care</h1>
+          <h1 className='py-20 md:py-24 text-center text-2xl md:text-5xl'>Experience Top-Quality Eye Care</h1>
           <p className='text-xl'>At our clinic, we&apos;re dedicated to providing you with the highest standard of eye care services. Our expert teams are
           committed to delivering personalized care and top-quality treatments to ensure your eye health is our top priority. With a strong emphasis on
           advanced technologies and a patient-centered approach, we&apos;re here to help you achieve and maintain optimal vision, so you can experience life with
@@ -74,7 +74,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className='md:px-20 pt-16 flex flex-col gap-12 w-2/3' >
+        <div className='md:px-20 pt-20 flex flex-col gap-12 w-2/3' >
           <h1 className='text-2xl md:text-5xl'>Insurances We Accept</h1>
           <ul className='grid md:grid-cols-3 gap-4 text-start'>
             {acceptedInsurances.map((insurance, index) => (
@@ -100,7 +100,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className='px-4 md:px-20 py-16 flex flex-col gap-8 w-full md:w-2/3' >
+        <div className='px-4 md:px-20 py-20 flex flex-col gap-8 w-full md:w-2/3' >
           <h1 className='text-2xl md:text-5xl'>Welcome to Our Optical Shop</h1>
           <p>Discover a world of stylish eyewear and professional eye care services at our optical shop. We are dedicated to providing you with top-quality eyeglasses, sunglasses, and contact lenses that suit your unique style and vision needs.</p>
           <p>Our experienced opticians are here to assist you in finding the perfect eyewear and ensuring a comfortable fit. Whether you&apos;re looking for fashion-forward frames or advanced lens technologies, we have a wide selection to meet your preferences.</p>
@@ -127,7 +127,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='w-full bg-white px-4 py-16 md:px-20 flex flex-wrap flex-col gap-16' id='doctors'>
+      <section className='w-full bg-white px-4 py-20 md:px-20 flex flex-wrap flex-col gap-16' id='doctors'>
         <h1 className='text-2xl md:text-5xl text-center'>Meet Our Doctors!</h1>
         {doctors.map((doctor, index) => (
           <>

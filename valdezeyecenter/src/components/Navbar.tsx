@@ -10,10 +10,11 @@ import Sidebar from './Sidebar';
 export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const navbarHeight = 80; // Set the navbar height to 5rem (80px)
+
 
   // Function to scroll to the target section while considering the navbar's height
   const scrollToSection = (sectionId:string) => {
+    const navbarHeight = 80; // Set the navbar height to 5rem (80px)
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
       const targetOffset = targetSection.getBoundingClientRect().top + window.scrollY;
