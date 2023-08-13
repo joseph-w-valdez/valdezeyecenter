@@ -10,8 +10,16 @@ import Sidebar from './Sidebar';
 export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const handleCloseSidebar = () => {
-    setSidebarOpen(false);
+  const navbarHeight = 80; // Set the navbar height to 5rem (80px)
+
+  // Function to scroll to the target section while considering the navbar's height
+  const scrollToSection = (sectionId:string) => {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      const targetOffset = targetSection.getBoundingClientRect().top + window.scrollY;
+      const adjustedOffset = targetOffset - navbarHeight; // Adjust the scroll position to be below the navbar
+      window.scrollTo({ top: adjustedOffset, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -25,7 +33,15 @@ export default function Navbar() {
       </button>
       <div className={`hidden xl:flex items-center gap-x-4 ${sidebarOpen ? 'block' : 'hidden'}`}>
         {navItems.map((item, index) => (
-          <Link href={item.href} key={index} passHref className={`text-2xl ${item.isContact ? 'rounded-lg text-black bg-white border border-2 p-2 hover:bg-blue-700 hover:text-white' : 'hover:text-black'}`}>
+          <Link
+            href={item.href}
+            key={index}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection(item.href.substring(1));
+            }}
+            className={`text-2xl ${item.isContact ? 'rounded-lg text-black bg-white border border-2 p-2 hover:bg-blue-700 hover:text-white' : 'hover:text-black'}`}
+          >
             {item.text}
           </Link>
         ))}

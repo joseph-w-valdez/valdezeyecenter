@@ -27,7 +27,7 @@ export default function Home() {
       </section>
       <section className='w-full text-center py-16 md:py-40 text-2xl md:text-5xl' id='info-blocks'>
         <h1>Our Patient-Focused Approach</h1>
-        <div className='flex flex-wrap md:mt-12 text-center'>
+        <div className='flex flex-wrap text-center'>
           {infoBlocks.map((content, index) => (
             <div key={index} className='mt-12 mx-4 md:mx-0 w-full md:w-1/3 flex flex-col items-center gap-8'>
               <div className='mb-4'>
@@ -47,8 +47,8 @@ export default function Home() {
         </div>
       </section>
       <section className='w-full bg-[#d3d3d3] flex flex-wrap justify-evenly px-4 md:py-24 md:px-20' id='clinic'>
-         <div className='flex flex-col w-full md:w-1/3 md:gap-8'>
-          <h1 className='py-16 md:py-40 text-center text-2xl md:text-5xl'>Experience Top-Quality Eye Care</h1>
+         <div className='flex flex-col w-full md:w-1/3'>
+          <h1 className='py-16 md:py-24 text-center text-2xl md:text-5xl'>Experience Top-Quality Eye Care</h1>
           <p className='text-xl'>At our clinic, we&apos;re dedicated to providing you with the highest standard of eye care services. Our expert teams are
           committed to delivering personalized care and top-quality treatments to ensure your eye health is our top priority. With a strong emphasis on
           advanced technologies and a patient-centered approach, we&apos;re here to help you achieve and maintain optimal vision, so you can experience life with
