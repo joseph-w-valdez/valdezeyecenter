@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import clinic from '../assets/images/clinic-2.JPG'
-import coverage from '../assets/images/coverage.jpg'
-import flowers from '../assets/images/flowers-1.png'
-import optical from '../assets/images/optical-banner/optical-banner-3.png'
+import clinic from '../assets/images/clinic.png'
+import coverage from '../assets/images/coverage.png'
+import optical from '../assets/images/optical.png'
 // best optical: 3 8 10 12 13 14 15
-import splash from '../assets/images/splash.jpg'
+import splash from '../assets/images/splash.png'
 import { doctors } from '@/data/doctors'
 import { infoBlocks } from '@/data/infoBlocks'
 import { acceptedInsurances } from '@/data/insurances'
@@ -48,15 +47,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className='w-full h-full max-h-[500px] overflow-hidden flex justify-center' id='spacer'>
-        <Image
-          src={flowers} alt='splash image'
-          className='object-cover w-full'
-          height={0} width={0} sizes='100vw'
-          priority
-        />
-      </section>
-      <section className='bg-[#F5F3F2] flex justify-evenly py-24 px-20' id='clinic'>
+      <section className='bg-[#d3d3d3] flex justify-evenly py-24 px-20' id='clinic'>
          <div className='flex flex-col w-1/3 gap-8'>
           <h1 className='text-6xl'>Experience Top-Quality Eye Care</h1>
           <p className='text-xl'>At our clinic, we&apos;re dedicated to providing you with the highest standard of eye care services. Our expert teams are committed to delivering personalized care and top-quality treatments to ensure your eye health is our top priority. With a strong emphasis on advanced technologies and a patient-centered approach, we're here to help you achieve and maintain optimal vision, so you can experience life with clarity and confidence.</p>
@@ -93,9 +84,12 @@ export default function Home() {
               </li>
             ))}
           </ul>
+          <p>We proudly accept a wide range of insurance providers, including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, Humana, and more. If you
+            don&apos;t immediately see your coverage, our dedicated insurance support team is here to assist. Contact us, and we&apos;ll work to verify your
+            coverage and guide you through the process, ensuring you can access the eyewear you need with the insurance you trust.</p>
         </div>
       </section>
-      <section className='w-full text-center text-white bg-blue-800 text-xl flex flex-col gap-4 items-center' id='optical'>
+      <section className='w-full text-center text-white bg-gray-800 text-xl flex flex-col gap-4 items-center' id='optical'>
         <div className='w-full h-full max-h-[600px] overflow-hidden flex justify-center'>
           <Image
             src={optical} alt='optical'
@@ -110,7 +104,7 @@ export default function Home() {
           <p>Our experienced opticians are here to assist you in finding the perfect eyewear and ensuring a comfortable fit. Whether you&apos;re looking for fashion-forward frames or advanced lens technologies, we have a wide selection to meet your preferences.</p>
           <p>Visit our optical shop and experience the difference in clarity and style. We take pride in offering personalized service to help you see and look your best, enhancing both your vision and confidence.</p>
         </div>
-        <div className='bg-gray-700 w-full flex justify-center px-20 pt-12 pb-20'>
+        <div className='bg-blue-400 w-full flex justify-center px-20 pt-12 pb-20'>
           <div className='flex flex-col gap-12 w-2/3' >
             <h1 className='text-6xl'>Brands We Carry</h1>
             <ul className='grid grid-cols-3 gap-4'>
@@ -123,6 +117,11 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+            <p>At our optical shop, we take great pride in offering an extensive range of options, each reflecting distinct styles. From classic styles with enduring appeal to sophisticated pieces
+              that exude luxury, our collection spans a wide spectrum of fashion-forward choices. </p>
+            <p>We also welcome you to bring in your own frames for a personalized touch. Our skilled opticians will thoughtfully fit them with custom lenses that align
+              with your prescription, seamlessly integrating cutting-edge technology with your individual preferences. This approach ensures both impeccable visual clarity and a
+              continuation of the unique story behind your frames.</p>
           </div>
         </div>
       </section>

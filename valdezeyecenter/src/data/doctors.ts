@@ -1,5 +1,5 @@
-import doctorValdez from '../assets/images/doctor-valdez.jpg'
-import doctorHsu from '../assets/images/doctor-hsu.jpg'
+import doctorValdez from '../assets/images/doctor-valdez.png'
+import doctorHsu from '../assets/images/doctor-hsu.png'
 
 export const doctors = [
   {
