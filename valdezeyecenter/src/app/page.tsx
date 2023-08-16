@@ -74,7 +74,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className='md:px-20 pt-20 flex flex-col gap-12 w-2/3' >
+        <div className='md:px-20 pt-20 flex flex-col gap-12 w-3/4' >
           <h1 className='text-2xl md:text-5xl'>Insurances We Accept</h1>
           <ul className='grid md:grid-cols-3 landscape:grid-cols-2 gap-4 text-start'>
             {acceptedInsurances.map((insurance, index) => (
@@ -107,7 +107,7 @@ export default function Home() {
           <p>Visit our optical shop and experience the difference in clarity and style. We take pride in offering personalized service to help you see and look your best, enhancing both your vision and confidence.</p>
         </div>
         <div className='bg-blue-400 w-full flex justify-center px-4 md:px-20 pt-12 pb-20 text-start md:text-center'>
-          <div className='flex flex-col gap-12 w-full md:w-2/3' >
+          <div className='flex flex-col gap-12 w-full md:w-3/4' >
             <h1 className='text-2xl md:text-5xl text-center'>Brands We Carry</h1>
             <ul className='grid md:grid-cols-3 landscape:grid-cols-2 gap-4'>
               {eyeglassBrands.map((brand, index) => (
