@@ -14,8 +14,8 @@ export default function Spotlight() {
 
   return (
       <div className="flex flex-col gap-12 w-2/3">
-        <h1>Weekly Wellness Spotlight: <span>{randomCondition.name}</span></h1>
-        <p className="text-2xl">{randomCondition.description}</p>
+        <h1>Wellness Spotlight: <span>{randomCondition.name}</span></h1>
+        <p className="text-2xl min-h-[200px]">{randomCondition.description}</p>
         <a href={randomCondition.url} target="_blank" rel="noopener noreferrer" className="w-fit text-xl underline text-blue-700 hover:text-blue-400">Learn more here!</a>
         <button
           className="border border-2 border-black rounded-lg w-[200px] text-xl py-1 font-bold bg-blue-700 text-white hover:text-black hover:bg-blue-400"
@@ -29,6 +29,6 @@ export default function Spotlight() {
         >
           Go Back
         </Link>
-      </div>
+    </div>
   );
 }

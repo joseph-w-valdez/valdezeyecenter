@@ -1,8 +1,10 @@
+/* Make sure to add items alphabetically for easy organization */
+
 export const healthConditions = [
   {
     name: "Amblyopia (Lazy Eye)",
     description: "Amblyopia, commonly referred to as lazy eye, is a condition where one eye has weaker vision than the other due to inadequate visual stimulation during childhood. This can occur due to factors such as crossed eyes or significant differences in refractive errors between the two eyes. If left untreated, amblyopia can lead to permanent vision impairment in the weaker eye. Early intervention, often involving corrective eyewear and visual therapy, can help stimulate proper visual development and improve the weaker eye's function.",
-    url: "https://www.aao.org/eye-health/diseases/what-is-amblyopia"
+    url: "https://eyewiki.aao.org/Amblyopia"
   },
   {
     name: "Astigmatism",
@@ -37,7 +39,7 @@ export const healthConditions = [
   {
     name: "Diabetic Retinopathy",
     description: "Diabetic retinopathy is a complication of diabetes that impacts the blood vessels in the retina, the light-sensitive tissue at the back of the eye. Uncontrolled blood sugar levels can cause damage to these blood vessels, leading to various retinal abnormalities. Over time, diabetic retinopathy can result in vision problems and even blindness if not properly managed. Regular eye screenings are essential for individuals with diabetes to detect and treat this condition in its early stages.",
-    url: "https://www.diabetes.org/diabetic-retinopathy"
+    url: "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/diabetic-retinopathy"
   },
   {
     name: "Dry Eye Syndrome",
@@ -77,7 +79,7 @@ export const healthConditions = [
   {
     name: "Night Blindness",
     description: "Night blindness, also known as nyctalopia, is a condition where an individual experiences difficulty seeing in low-light conditions or at night. It can be caused by various factors, including vitamin A deficiency, genetic conditions, or retinal diseases. Management may involve addressing the underlying cause and using strategies to enhance night vision.",
-    url: "https://www.healthline.com/health/night-blindness"
+    url: "https://www.mountsinai.org/health-library/symptoms/vision-night-blindness"
   },
   {
     name: "Nystagmus",
@@ -102,7 +104,7 @@ export const healthConditions = [
   {
     name: "Photokeratitis (Snow Blindness)",
     description: "Photokeratitis, commonly known as snow blindness, is a painful eye condition caused by overexposure to ultraviolet (UV) radiation from the sun or other sources, such as welding arcs. It leads to inflammation of the cornea, similar to a sunburn. Symptoms include redness, pain, light sensitivity, and blurred vision. Rest and avoiding bright light can help with recovery.",
-    url: "https://www.aao.org/eye-health/diseases/photokeratitis"
+    url: "https://my.clevelandclinic.org/health/diseases/15763-photokeratitis"
   },
   {
     name: "Pinguecula and Pterygium",
@@ -117,12 +119,12 @@ export const healthConditions = [
   {
     name: "Ptosis (Drooping Eyelid)",
     description: "Ptosis is a condition characterized by the drooping of the upper eyelid, which can partially or completely cover the eye's pupil. It can be congenital (present from birth) or acquired due to aging, muscle weakness, or neurological conditions. Ptosis can affect vision and may require surgical correction if severe.",
-    url: "https://www.aao.org/eye-health/diseases/ptosis-drooping-eyelid"
+    url: "https://www.aao.org/eye-health/diseases/what-is-ptosis"
   },
   {
     name: "Retinal Detachment",
     description: "Retinal detachment occurs when the retina becomes separated from the back of the eye's inner lining. This condition is considered a medical emergency as it can lead to permanent vision loss if not promptly treated. Symptoms of retinal detachment may include sudden flashes of light, the appearance of floaters, and the sensation of a curtain-like shadow moving across the field of vision. Surgical intervention is typically required to reattach the retina and restore proper vision.",
-    url: "https://www.aao.org/eye-health/diseases/what-is-retinal-detachment"
+    url: "https://www.aao.org/eye-health/diseases/detached-torn-retina"
   },
   {
     name: "Retinitis Pigmentosa",
