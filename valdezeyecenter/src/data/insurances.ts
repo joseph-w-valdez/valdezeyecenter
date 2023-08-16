@@ -56,10 +56,6 @@ export const acceptedInsurances = [
     url: 'https://lasallebenefits.com/services/health-insurance',
   },
   {
-    name: 'Loma Linda',
-    url: 'https://murrieta.lluh.org/patients-visitors/patients/billing-insurance/insurance-information',
-  },
-  {
     name: 'Medi-Cal',
     url: 'https://www.dhcs.ca.gov/services/medi-cal/Pages/default.aspx'
   },
@@ -90,13 +86,5 @@ export const acceptedInsurances = [
   {
     name: 'UnitedHealthcare',
     url: 'https://www.uhc.com/',
-  },
-  {
-    name: 'Vantage',
-    url: 'https://www.vantagehealthplan.com/',
-  },
-  {
-    name: 'WPS Health Insurance',
-    url: 'https://www.wpshealthsolutions.com/index.shtml',
   },
 ];
