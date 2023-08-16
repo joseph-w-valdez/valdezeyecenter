@@ -25,7 +25,7 @@ export default function Spotlight() {
         </button>
         <Link
           href="/"
-          className="w-[100px] text-center border border-2 border-black rounded-lg w-[200px] text-xl py-1 font-bold bg-blue-700 text-white hover:text-black hover:bg-blue-400"
+          className="w-[100px] text-center border border-2 border-black rounded-lg text-xl py-1 font-bold bg-blue-700 text-white hover:text-black hover:bg-blue-400"
         >
           Go Back
         </Link>
