@@ -1,9 +1,10 @@
 export const navItems = [
-  { href: '#splash', text: 'Home' },
-  { href: '#info-blocks', text: 'Our Approach' },
-  { href: '#clinic', text: 'Clinic' },
-  { href: '#coverage', text: 'Insurances' },
-  { href: '#optical', text: 'Optical' },
-  { href: '#doctors', text: 'Our Staff' },
-  { href: '#footer', text: 'Contact Us', isContact: true },
+  { href: '/', text: 'Home' },
+  { href: '/#info-blocks', text: 'Our Approach' },
+  { href: '/#clinic', text: 'Clinic' },
+  { href: '/#coverage', text: 'Insurances' },
+  { href: '/#optical', text: 'Optical' },
+  { href: '/#doctors', text: 'Our Staff' },
+  { href: '/conditions', text: 'Condition Spotlight' },
+  { href: '/#footer', text: 'Contact Us', isContact: true },
 ];

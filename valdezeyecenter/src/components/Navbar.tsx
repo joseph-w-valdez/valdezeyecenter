@@ -10,19 +10,6 @@ import Sidebar from './Sidebar';
 export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-
-
-  // Function to scroll to the target section while considering the navbar's height
-  const scrollToSection = (sectionId:string) => {
-    const navbarHeight = 80; // Set the navbar height to 5rem (80px)
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-      const targetOffset = targetSection.getBoundingClientRect().top + window.scrollY;
-      const adjustedOffset = targetOffset - navbarHeight; // Adjust the scroll position to be below the navbar
-      window.scrollTo({ top: adjustedOffset, behavior: 'smooth' });
-    }
-  };
-
   return (
     <nav className="sticky top-0 z-10 w-full h-20 flex items-center justify-between px-6 border-b-4 border-double bg-blue-400">
       <Link href='/' className='text:md sm:text-2xl flex items-center gap-4 hover:text-black'>
@@ -37,11 +24,7 @@ export default function Navbar() {
           <Link
             href={item.href}
             key={index}
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection(item.href.substring(1));
-            }}
-            className={`text-2xl ${item.isContact ? 'rounded-lg text-black bg-white border border-2 p-2 hover:bg-blue-700 hover:text-white' : 'hover:text-black'}`}
+            className={`text-xl ${item.isContact ? 'rounded-lg text-black bg-white border border-2 p-2 hover:bg-blue-700 hover:text-white' : 'hover:text-black'}`}
           >
             {item.text}
           </Link>
