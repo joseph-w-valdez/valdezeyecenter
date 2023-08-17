@@ -1,5 +1,7 @@
+'use client'
 import Image from 'next/image'
 import logoFull from '../assets/images/logo-full.png'
+import MapComponent from './GoogleMap'
 
 export default function Navbar() {
 
@@ -12,9 +14,12 @@ export default function Navbar() {
         <div className='w-full max-w-[250px] landscape:w-1/4 flex justify-center items-center'>
           <Image src={logoFull} alt='full logo' />
         </div>
-        <div className='w-full md:w-1/4 landscape:w-1/3'>
+        <div className='w-full md:w-1/4 landscape:w-1/3 h-full'>
           <p>Phone: <a href="tel:760-946-2020" className='underline'>(760) 946-2020</a></p>
           <p>Address: 16031 Tuscola Rd, Apple Valley, CA 92307</p>
+          <div className="py-2 pb-6 h-full w-full">
+            <MapComponent />
+          </div>
         </div>
         <div className='w-full md:w-1/4 landscape:w-1/3'>
           <div><p>Hours:</p></div>
@@ -27,6 +32,7 @@ export default function Navbar() {
           <div><span>Sunday: </span><span>Closed</span></div>
         </div>
       </div>
+
       <div className='bg-white w-full flex justify-start md:pl-20 pl-4 py-2 text-black'><p>© 2023 ValdezEyeCenter. All rights reserved.</p></div>
     </footer>
   )
