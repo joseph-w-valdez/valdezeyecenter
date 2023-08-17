@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className='w-full max-w-[225px] landscape-sm:w-1/4 flex justify-center items-center'>
           <Image src={logoFull} alt='full logo' />
         </div>
-        <div className='w-full md:w-1/3 h-full flex flex-wrap items-start'>
+        <div className='w-full md:w-1/3 h-full landscape-sm:contents flex flex-wrap items-start'>
           <p>Phone: <a href="tel:760-946-2020" className='underline'>(760) 946-2020</a></p>
           <p>Address: 16031 Tuscola Rd, Apple Valley, CA 92307</p>
           <div className="hidden xl:block py-4 pb-6 pr-8 h-full w-full landscape-sm:max-h-[250px]">
@@ -32,7 +32,6 @@ export default function Navbar() {
           <div><span>Sunday: </span><span>Closed</span></div>
         </div>
       </div>
-
       <div className='bg-white w-full flex justify-start md:pl-20 pl-4 py-2 text-black'><p>© 2023 ValdezEyeCenter. All rights reserved.</p></div>
     </footer>
   )
