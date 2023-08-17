@@ -10,7 +10,7 @@ export default function Navbar() {
       <h1 className='text-3xl md:text-5xl'>Get started with ValdezEyeCenter</h1>
       <p className='w-full text-2xl md:text-4xl pt-4 px-4'>Schedule an appointment today!</p>
       <div className='w-full h-[1px] bg-white mx-12 mt-12'></div>
-      <div className='flex flex-wrap flex-col md:flex-row gap-12 md:gap-0 justify-between text-start text-xl py-20 px-4 landscape:px-4 md:px-40 w-full bg-blue-400'>
+      <div className='flex flex-wrap flex-col md:flex-row gap-12 md:gap-0 justify-between text-start text-xl py-20 px-4 md:px-40 w-full bg-blue-400'>
         <div className='w-full max-w-[250px] landscape:w-1/4 flex justify-center items-center'>
           <Image src={logoFull} alt='full logo' />
         </div>
