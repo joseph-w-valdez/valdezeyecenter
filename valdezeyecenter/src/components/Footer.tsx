@@ -10,18 +10,18 @@ export default function Navbar() {
       <h1 className='text-3xl md:text-5xl'>Get started with ValdezEyeCenter</h1>
       <p className='w-full text-2xl md:text-4xl pt-4 px-4'>Schedule an appointment today!</p>
       <div className='w-full h-[1px] bg-white mx-12 mt-12'></div>
-      <div className='flex flex-wrap flex-col md:flex-row gap-12 md:gap-0 justify-between text-start text-xl py-20 px-4 md:px-40 w-full bg-blue-400'>
+      <div className='flex landscape:flex-wrap items-center  md:flex-wrap flex-col md:flex-row gap-12 md:gap-0 justify-between text-start text-xl py-20 px-4 md:px-40 w-full bg-blue-400'>
         <div className='w-full max-w-[225px] landscape:w-1/4 flex justify-center items-center'>
           <Image src={logoFull} alt='full logo' />
         </div>
         <div className='w-full md:w-1/4 landscape:w-1/3 h-full'>
           <p>Phone: <a href="tel:760-946-2020" className='underline'>(760) 946-2020</a></p>
           <p>Address: 16031 Tuscola Rd, Apple Valley, CA 92307</p>
-          <div className="py-2 pb-6 h-full w-full">
+          <div className="py-4 pb-6 pr-8 h-full w-full landscape:max-h-[250px]">
             <MapComponent />
           </div>
         </div>
-        <div className='w-full md:w-1/4 landscape:w-1/3'>
+        <div className='pt-8 w-full md:w-1/4 landscape:w-1/3'>
           <div><p>Hours:</p></div>
           <div><span>Monday: </span><span>8 AM-5 PM</span></div>
           <div><span>Tuesday: </span><span>8 AM-5 PM</span></div>
