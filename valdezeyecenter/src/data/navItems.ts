@@ -1,5 +1,6 @@
 export const navItems = [
   { href: '/', text: 'Home' },
+  { href: '/#directions', text: 'Directions'},
   { href: '/#info-blocks', text: 'Our Approach' },
   { href: '/#clinic', text: 'Clinic' },
   { href: '/#coverage', text: 'Insurances' },
