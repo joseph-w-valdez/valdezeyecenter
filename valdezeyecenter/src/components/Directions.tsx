@@ -37,12 +37,12 @@ const locations: Location[] = [
 
 const Directions: React.FC = () => {
   return (
-    <section className='w-full bg-white flex flex-col gap-4 flex-wrap justify-evenly px-4 md:py-24 md:px-20 landscape-sm:px-0 landscape-sm:items-center ' id='directions'>
+    <section className='w-full bg-white flex flex-col gap-4 flex-wrap justify-evenly px-4 py-12 md:py-24 md:px-20 landscape-sm:px-0 landscape-sm:items-center ' id='directions'>
       <h1 className='text-center text-2xl md:text-5xl'>Find Us</h1>
       <div className="flex flex-col gap-4">
         {locations.map((location, index) => (
           <div key={index} className="text-3xl flex flex-col gap-4 items-center text-start mt-20">
-            <h3>{location.title}</h3>
+            <h3 className='font-bold'>{location.title}</h3>
             <div className='w-full h-full max-h-[600px] overflow-hidden flex justify-center my-12'>
               <Image
                 src={location.imageSrc} alt={`${location.title} Exterior`}

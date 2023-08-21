@@ -82,11 +82,6 @@ export const healthConditions = [
     url: "https://www.mountsinai.org/health-library/symptoms/vision-night-blindness"
   },
   {
-    name: "Nystagmus",
-    description: "Nystagmus is an involuntary rhythmic movement of the eyes. It can be present from birth (congenital) or acquired due to underlying neurological conditions, medications, or other factors. Nystagmus can result in reduced vision and depth perception. Management aims to improve visual function and minimize associated symptoms.",
-    url: "https://www.aao.org/eye-health/diseases/nystagmus"
-  },
-  {
     name: "Ocular Hypertension",
     description: "Ocular hypertension refers to elevated intraocular pressure (IOP) within the eye that is higher than normal but not yet at a level to be diagnosed as glaucoma. It is a significant risk factor for developing glaucoma. Regular eye exams and monitoring are essential to detect any progression or changes in ocular hypertension.",
     url: "https://www.aao.org/eye-health/diseases/ocular-hypertension"
@@ -100,11 +95,6 @@ export const healthConditions = [
     name: "Optic Neuritis",
     description: "Optic neuritis is an inflammation of the optic nerve, which transmits visual information from the eye to the brain. It often causes sudden vision loss, pain, and changes in color perception. Optic neuritis can be a symptom of multiple sclerosis or occur independently. Treatment may involve corticosteroids to reduce inflammation and manage symptoms.",
     url: "https://www.aao.org/eye-health/diseases/optic-neuritis"
-  },
-  {
-    name: "Photokeratitis (Snow Blindness)",
-    description: "Photokeratitis, commonly known as snow blindness, is a painful eye condition caused by overexposure to ultraviolet (UV) radiation from the sun or other sources, such as welding arcs. It leads to inflammation of the cornea, similar to a sunburn. Symptoms include redness, pain, light sensitivity, and blurred vision. Rest and avoiding bright light can help with recovery.",
-    url: "https://my.clevelandclinic.org/health/diseases/15763-photokeratitis"
   },
   {
     name: "Pinguecula and Pterygium",
@@ -130,6 +120,14 @@ export const healthConditions = [
     name: "Retinitis Pigmentosa",
     description: "Retinitis pigmentosa is a group of inherited eye disorders that lead to degeneration of the retina's light-sensitive cells. It often begins with night blindness and progresses to tunnel vision or even blindness. There is no cure, but visual aids, mobility training, and research studies may help manage the condition.",
     url: "https://www.aao.org/eye-health/diseases/retinitis-pigmentosa"
+  },
+  {
+    name: "Smoking and Eye Health",
+    description: "Smoking can have detrimental effects on eye health. The chemicals in tobacco smoke can damage blood vessels, leading to reduced blood flow to the eyes and an increased risk of various eye conditions. Smokers are at a higher risk of developing cataracts, macular degeneration, and diabetic retinopathy. The harmful impact of smoking extends to secondhand smoke exposure, which can also affect eye health.",
+    url: "https://www.aao.org/eye-health/tips-prevention/smokers",
+    smokingCessation: {
+      url: 'https://www.cdc.gov/tobacco/data_statistics/fact_sheets/cessation/smoking-cessation-fast-facts/index.html'
+    }
   },
   {
     name: "Stargardt Disease",
