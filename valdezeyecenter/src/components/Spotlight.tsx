@@ -10,6 +10,7 @@ export default function Spotlight() {
   const loadNewCondition = () => {
     const newIndex = Math.floor(Math.random() * healthConditions.length);
     setRandomIndex(newIndex);
+    window.scrollTo(0, 0)
   };
 
   return (
