@@ -51,9 +51,7 @@ const Directions: React.FC = () => {
                 priority
               />
             </div>
-            <p className='w-2/3'>
-              Directions: <br />{location.directions}
-            </p>
+            <p className='w-2/3'>Directions: <br />{location.directions}</p>
             <p className='w-2/3'>Address: {location.address}</p>
             <p className='w-2/3'>Phone: <a href={`tel:${location.phone}`} className='underline text-blue-500 hover:text-blue-300'>{location.phone}</a></p>
           </div>
