@@ -21,7 +21,7 @@ export default function Doctors() {
             <div className='w-36 h-36 md:w-[300px] md:h-[300px] my-8 md:my-0 rounded-full overflow-hidden shadow-2xl'>
               <Image
                 src={doctor.image} alt={doctor.name}
-                className='object-cover w-full'
+                className='object-cover h-full'
                 height={0} width={0} sizes='100vw'
                 priority
               />
