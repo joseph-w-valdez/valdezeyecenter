@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <footer className="w-full h-fit md:h-64 flex flex-wrap justify-center text-center border-t-4 border-double bg-blue-400 py-20" id='footer'>
-      <h1 className='text-3xl md:text-5xl'>Get started with ValdezEyeCenter</h1>
+      <h1 className='text-3xl md:text-5xl'>Get started with Valdez Eye Center</h1>
       <p className='w-full text-2xl md:text-4xl pt-4 px-4'>Schedule an appointment today!</p>
       <div className='w-full h-[1px] bg-white mx-12 mt-12'></div>
 
@@ -44,7 +44,7 @@ export default function Navbar() {
           <div><span>Sunday: </span><span>Closed</span></div>
         </div>
       </div>
-      <div className='bg-white w-full flex justify-start md:pl-20 pl-4 py-2 text-black'><p>© 2023 ValdezEyeCenter. All rights reserved.</p></div>
+      <div className='bg-white w-full flex justify-start md:pl-20 pl-4 py-2 text-black'><p>© 2023 Valdez Eye Center. All rights reserved.</p></div>
     </footer>
   )
 }
