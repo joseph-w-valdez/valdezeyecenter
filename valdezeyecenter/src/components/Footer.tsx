@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import logoFull from '../assets/images/logo-full.png'
 
 export default function Navbar() {
@@ -9,12 +10,13 @@ export default function Navbar() {
       <h1 className='text-3xl md:text-5xl'>Get started with ValdezEyeCenter</h1>
       <p className='w-full text-2xl md:text-4xl pt-4 px-4'>Schedule an appointment today!</p>
       <div className='w-full h-[1px] bg-white mx-12 mt-12'></div>
-      <div className='flex landscape-sm:flex-wrap items-center md:flex-wrap flex-col md:flex-row gap-12 md:gap-0 justify-between text-start text-xl py-20 px-4 md:px-20 w-full bg-blue-400'>
+
+      <div className='flex landscape-sm:flex-wrap items-center md:flex-wrap flex-col lg:flex-row gap-12 lg:gap-0 justify-between text-center lg:text-start text-xl py-24 px-4 md:px-20 w-full bg-blue-400'>
         <div className='w-full max-w-[225px] landscape-sm:w-1/4 flex justify-center items-center'>
           <Image src={logoFull} alt='full logo' />
         </div>
         <div className='w-full md:w-1/3 h-full landscape-sm:contents flex flex-wrap items-start'>
-          <p>Phone: <a href="tel:760-946-2020" className='underline'>(760) 946-2020</a></p>
+          <p>Phone: <a href="tel:760-946-2020" className='underline hover:text-black'>(760) 946-2020</a></p>
           <p>Address: 16031 Tuscola Rd, Apple Valley, CA 92307</p>
           <div className="hidden xl:block py-4 pb-6 pr-8 h-full w-full landscape-sm:max-h-[250px]">
             <iframe
@@ -23,6 +25,12 @@ export default function Navbar() {
               loading="lazy"
             >
             </iframe>
+            <Link
+              href='https://goo.gl/maps/c2663pPazi36HoCk9' target='_blank' rel='noreferrer'
+              className='text-xl text-white underline hover:text-black'
+            >
+              Click here to expand the map
+            </Link>
           </div>
         </div>
         <div className='w-full md:w-1/4 landscape-sm:w-1/3'>
