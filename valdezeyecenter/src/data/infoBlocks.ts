@@ -5,7 +5,7 @@ import doctorsIcon from '../assets/images/doctors.png'
 export const infoBlocks = [
   {
     title: 'We welcome many insurances!',
-    text1: 'At ValdezEyeCenter, we proudly welcome all insurances and provide affordable options for all our patients. Our dedicated team works tirelessly to ensure that you can access the eye care you need without any financial burdens.',
+    text1: 'At Valdez Eye Center, we gladly welcome all insurances and provide affordable options for all of our patients. Our dedicated team works tirelessly to ensure that you can access the eye care you need without any financial burdens.',
     text2: 'Whether you have private insurance, government coverage, or are self-paying, we have solutions to accommodate your needs and preferences.',
     icon: insuranceIcon,
     linkText: 'CHECK COVERAGE',
@@ -21,7 +21,7 @@ export const infoBlocks = [
   },
   {
     title: 'Our Doctors',
-    text1: 'At ValdezEyeCenter, we understand the importance of personalized care. Our experienced and highly-trained doctors are dedicated to working closely with you to create a Stay Well Care Plan - a personalized wellness plan that addresses your unique eye health needs.',
+    text1: 'At Valdez Eye Center, we understand the importance of personalized care. Our experienced and highly-trained staff are dedicated to working closely with you to create a personalized wellness plan that addresses your unique eye health needs.',
     text2: 'We believe that building a strong doctor-patient relationship is the foundation of exceptional eye care, and our doctors are committed to providing you with the highest quality of service.',
     icon: doctorsIcon,
     linkText: 'MEET OUR DOCTORS',

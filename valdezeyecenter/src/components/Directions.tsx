@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link'
 import { locations } from '@/data/locations';
 
 const Directions: React.FC = () => {
@@ -32,6 +33,12 @@ const Directions: React.FC = () => {
                 <p>{location.directions}</p>
                 <p className='w-full'>Address: {location.address}</p>
                 <p className='w-full'>Phone Number: <a href={`tel:${location.phone}`} className='underline text-blue-500 hover:text-blue-300'>{location.phone}</a></p>
+                <Link
+                  href={location.link} target='_blank' rel='noreferrer'
+                  className='text-white border border-2 border-black rounded-lg w-[200px] p-2 text-xl bg-blue-700 text-white hover:text-black hover:bg-blue-400 w-max'
+                >
+                  Click here to expand the map
+                </Link>
               </div>
             </div>
             {index < locations.length - 1 && (
