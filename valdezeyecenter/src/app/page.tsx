@@ -6,7 +6,7 @@ import Clinic from '@/components/Clinic'
 import Directions from '@/components/Directions'
 import Coverage from '@/components/Coverage'
 import Optical from '@/components/Optical'
-import Doctors from '@/components/Doctors'
+import Staff from '@/components/Staff'
 
 export default function Home() {
   return (
@@ -28,7 +28,7 @@ export default function Home() {
       <Directions />
       <Coverage />
       <Optical />
-      <Doctors />
+      <Staff />
     </main>
   )
 }

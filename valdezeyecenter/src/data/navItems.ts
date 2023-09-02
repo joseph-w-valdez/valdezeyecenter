@@ -5,7 +5,7 @@ export const navItems = [
   { href: '/#clinic', text: 'Clinic' },
   { href: '/#coverage', text: 'Insurances' },
   { href: '/#optical', text: 'Optical' },
-  { href: '/#doctors', text: 'Our Staff' },
+  { href: '/#staff', text: 'Our Staff' },
   { href: '/conditions', text: 'Wellness Spotlight' },
   { href: '/#footer', text: 'Contact Us', isContact: true },
 ];
