@@ -15,7 +15,7 @@ export default function Spotlight() {
 
   return (
     <div className="flex flex-col gap-12 w-2/3">
-      <h1>Wellness Spotlight: <span>{randomCondition.name}</span></h1>
+      <h1>{randomCondition.name}</h1>
       <p className="text-2xl min-h-[200px]">{randomCondition.description}</p>
       {randomCondition.smokingCessation && (
         <p className="text-red-600 text-lg">

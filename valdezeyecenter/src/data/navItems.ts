@@ -6,6 +6,6 @@ export const navItems = [
   { href: '/#coverage', text: 'Insurances' },
   { href: '/#optical', text: 'Optical' },
   { href: '/#staff', text: 'Our Staff' },
-  { href: '/conditions', text: 'Wellness Spotlight' },
+  { href: '/conditions', text: 'Explore Health Conditions' },
   { href: '/#footer', text: 'Contact Us', isContact: true },
 ];
