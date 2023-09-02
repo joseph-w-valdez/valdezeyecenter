@@ -7,7 +7,7 @@ export const eyeglassBrands = [
   { name: "Jimmy Choo", url: "https://www.jimmychoo.com/" },
   { name: "Juicy Couture", url: "https://www.juicycouture.com/" },
   { name: "Kate Spade", url: "https://www.katespade.com/" },
-  { name: "Line Art CHARMANT", url: "https://www.charmant.com/us/brands/line-art-charmant" },
+  { name: "Line Art", url: "https://www.charmant.com/us/brands/line-art-charmant" },
   { name: "Nike", url: "https://www.nikevision.com/" },
   { name: "Oakley", url: "https://www.oakley.com/" },
   { name: "Prada", url: "https://www.prada.com/" },

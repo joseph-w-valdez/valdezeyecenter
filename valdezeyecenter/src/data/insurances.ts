@@ -28,6 +28,10 @@ export const acceptedInsurances = [
     url: 'https://www.cigna.com/',
   },
   {
+    name: 'Davis Vision',
+    url: 'https://davisvision.com/'
+  },
+  {
     name: 'Desert Valley Med Grp',
     url: 'https://desertvalleymedicalgroup.com/',
   },
@@ -56,16 +60,12 @@ export const acceptedInsurances = [
     url: 'https://lasallebenefits.com/services/health-insurance',
   },
   {
-    name: 'Medi-Cal',
-    url: 'https://www.dhcs.ca.gov/services/medi-cal/Pages/default.aspx'
+    name: 'Medical Eye Services',
+    url: 'https://www.mesvision.com/'
   },
   {
     name: 'Medicare/Palmetto GBA',
     url: 'https://www.palmettogba.com/',
-  },
-  {
-    name: 'Molina',
-    url: 'https://www.molinahealthcare.com/',
   },
   {
     name: 'Premier Health',
@@ -87,4 +87,8 @@ export const acceptedInsurances = [
     name: 'UnitedHealthcare',
     url: 'https://www.uhc.com/',
   },
+  {
+    name: 'Vision Service Plan',
+    url: 'https://www.vsp.com/'
+  }
 ];
