@@ -30,6 +30,10 @@ export default function Spotlight() {
     }
   };
 
+  const matchedCondition = healthConditions.find(condition =>
+    condition.name.toLowerCase() === searchTerm.toLowerCase()
+  );
+
   return (
     <div className="flex flex-col gap-12 w-2/3">
       <h1>{selectedCondition ? selectedCondition : healthConditions[randomIndex].name}</h1>
@@ -39,7 +43,7 @@ export default function Spotlight() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search for conditions"
-          className="border border-gray-300 rounded-lg p-2 mr-8"
+          className="border border-gray-300 rounded-lg p-2 mr-8 w-full max-w-[700px]"
           list="condition-list"
         />
         <datalist id="condition-list">
@@ -47,15 +51,13 @@ export default function Spotlight() {
             <option key={condition.name} value={condition.name} />
           ))}
         </datalist>
-        <button
-          type="submit"
-          className="border border-2 border-black rounded-lg w-[200px] text-xl py-1 font-bold bg-blue-700 text-white hover:text-black hover:bg-blue-400"
-        >
-          Search
-        </button>
       </form>
-
-      <p className="text-2xl min-h-[200px]">
+      {searchTerm && !matchedCondition && (
+        <p className="text-red-600 italic text-xl">
+          No matches found for &apos;{searchTerm}
+        </p>
+      )}
+      <p className="text-xl min-h-[200px]">
         {selectedCondition
           ? healthConditions.find(condition => condition.name === selectedCondition)?.description || ""
           : healthConditions[randomIndex].description}
@@ -77,7 +79,7 @@ export default function Spotlight() {
       </div>
       <Link
         href="/"
-        className="w-[100px] text-center border border-2 border-black rounded-lg text-xl py-1 font-bold bg-blue-700 text-white hover:text-black hover:bg-blue-400"
+        className="w-[100px] text-center border border-2 border-black rounded-lg text-xl py-1 font-bold bg-red-600 text-white hover:text-black hover:bg-red-400"
       >
         Go Back
       </Link>
