@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { healthConditions } from '@/data/healthConditions';
@@ -9,27 +9,33 @@ export default function Spotlight() {
   const [randomIndex, setRandomIndex] = useState<number>(
     Math.floor(Math.random() * healthConditions.length)
   );
-  const [selectedCondition, setSelectedCondition] = useState<string | null>(
-    null
-  );
+  const [selectedCondition, setSelectedCondition] = useState<string | null>(null);
+  const searchbarRef = useRef<HTMLInputElement>(null);
 
   const handleSelectionChange = (searchInput:any) => {
+    // if the searchInput is an event object because the user chose from the autofill suggestions list
     if (searchInput.innerText) {
       setSelectedCondition(searchInput.innerText)
     }
+    // otherwise the searchInput is a text element from the user typing in the searchbar
     else {
+      // check if there is a match in the healthConditions data array with the typed value
       const matchedCondition = healthConditions.find(
         (condition) => {
           return condition.name.toLowerCase() === searchInput.value?.toLowerCase()
         }
       );
+      // if there is a match with what the user typed and with an item in the healthConditions data array
       if (matchedCondition) {
+        const inputElement = searchbarRef.current?.querySelector('input');
+        if (inputElement) {
+          inputElement.blur();
+        }
         setSelectedCondition(matchedCondition.name)
       } else {
         setSelectedCondition(null)
       }
     }
-
 };
 
   const loadNewCondition = () => {
@@ -47,6 +53,7 @@ export default function Spotlight() {
           : healthConditions[randomIndex].name}
       </h1>
       <Autocomplete
+        ref={searchbarRef}
         value={
           selectedCondition
             ? healthConditions.find((condition) => condition.name === selectedCondition) || null
