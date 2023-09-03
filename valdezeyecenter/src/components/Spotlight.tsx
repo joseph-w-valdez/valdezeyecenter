@@ -24,7 +24,6 @@ export default function Spotlight() {
     // if the searchInput is an event object because the user chose from the autofill suggestions list
     if (searchInput.innerText) {
       setSelectedCondition(searchInput.innerText)
-      // find the input element and blur since a match was selected
       blurInputElement()
     }
     // otherwise the searchInput is a text element from the user typing in the searchbar
@@ -37,7 +36,6 @@ export default function Spotlight() {
       );
       // if there is a match with what the user typed and with an item in the healthConditions data array
       if (matchedCondition) {
-        // find the input element and blur since a match was found
         blurInputElement()
         setSelectedCondition(matchedCondition.name)
       } else {
