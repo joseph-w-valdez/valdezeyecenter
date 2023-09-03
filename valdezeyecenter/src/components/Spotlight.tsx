@@ -6,13 +6,11 @@ import { healthConditions } from '@/data/healthConditions';
 import Link from 'next/link';
 
 export default function Spotlight() {
-  const [randomIndex, setRandomIndex] = useState<number>(
-    Math.floor(Math.random() * healthConditions.length)
-  );
+  const [randomIndex, setRandomIndex] = useState<number>(Math.floor(Math.random() * healthConditions.length));
   const [selectedCondition, setSelectedCondition] = useState<string | null>(null);
   const searchbarRef = useRef<HTMLInputElement>(null);
 
-  // Utility function to blur the input element
+  // utility function to blur the input element
   const blurInputElement = () => {
     const inputElement = searchbarRef.current?.querySelector('input');
     if (inputElement) {
@@ -20,28 +18,14 @@ export default function Spotlight() {
     }
   };
 
-  const handleSelectionChange = (searchInput:any) => {
-    // if the searchInput is an event object because the user chose from the autofill suggestions list
-    if (searchInput.innerText) {
-      setSelectedCondition(searchInput.innerText)
-      blurInputElement()
-    }
-    // otherwise the searchInput is a text element from the user typing in the searchbar
-    else {
-      // check if there is a match in the healthConditions data array with the typed value
-      const matchedCondition = healthConditions.find(
-        (condition) => {
-          return condition.name.toLowerCase() === searchInput.value?.toLowerCase()
-        }
-      );
+  const handleSelectionChange = (searchInput:string) => {
+      // check if there is a match in the healthConditions data array with the typed or selected value
+      const matchedCondition = healthConditions.find((condition) => condition.name.toLowerCase() === searchInput?.toLowerCase());
       // if there is a match with what the user typed and with an item in the healthConditions data array
       if (matchedCondition) {
         blurInputElement()
         setSelectedCondition(matchedCondition.name)
-      } else {
-        setSelectedCondition(null)
       }
-    }
 };
 
   const loadNewCondition = () => {
@@ -65,7 +49,7 @@ export default function Spotlight() {
             ? healthConditions.find((condition) => condition.name === selectedCondition) || null
             : null
         }
-        onChange={(e) => handleSelectionChange(e.target)}
+        onChange={(e) => handleSelectionChange((e.target as HTMLInputElement).innerText)}
         options={healthConditions}
         getOptionLabel={(option) => option.name}
         renderInput={(params) => (
@@ -74,7 +58,7 @@ export default function Spotlight() {
             name='condition search'
             label="Search for conditions"
             variant="outlined"
-            onChange={(e)=> handleSelectionChange(e.target)}
+            onChange={(e)=> handleSelectionChange(e.target.value)}
           />
         )}
       />
@@ -88,7 +72,7 @@ export default function Spotlight() {
       {selectedCondition === 'Smoking and Eye Health' && (
         <p className="text-red-600 text-lg">
           If you&apos;re a smoker, consider quitting to reduce your risk. Learn
-          more about{' '}
+          more about&nbsp;
           <Link
             href={
               healthConditions[randomIndex].url || '/not-found'

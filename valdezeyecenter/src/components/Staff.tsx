@@ -34,7 +34,7 @@ export default function Doctors() {
       ))}
       <div>
         <h1 className='text-2xl md:text-5xl text-center mb-12'>Meet Our Staff!</h1>
-        <div className='w-full h-full max-h-[900px] flex justify-center'>
+        <div className='w-full h-full max-h-[600px] flex justify-center'>
           <Image
             src={staff} alt='staff photo'
             className='object-contain h-full'
