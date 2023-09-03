@@ -12,10 +12,20 @@ export default function Spotlight() {
   const [selectedCondition, setSelectedCondition] = useState<string | null>(null);
   const searchbarRef = useRef<HTMLInputElement>(null);
 
+  // Utility function to blur the input element
+  const blurInputElement = () => {
+    const inputElement = searchbarRef.current?.querySelector('input');
+    if (inputElement) {
+      inputElement.blur();
+    }
+  };
+
   const handleSelectionChange = (searchInput:any) => {
     // if the searchInput is an event object because the user chose from the autofill suggestions list
     if (searchInput.innerText) {
       setSelectedCondition(searchInput.innerText)
+      // find the input element and blur since a match was selected
+      blurInputElement()
     }
     // otherwise the searchInput is a text element from the user typing in the searchbar
     else {
@@ -27,10 +37,8 @@ export default function Spotlight() {
       );
       // if there is a match with what the user typed and with an item in the healthConditions data array
       if (matchedCondition) {
-        const inputElement = searchbarRef.current?.querySelector('input');
-        if (inputElement) {
-          inputElement.blur();
-        }
+        // find the input element and blur since a match was found
+        blurInputElement()
         setSelectedCondition(matchedCondition.name)
       } else {
         setSelectedCondition(null)
