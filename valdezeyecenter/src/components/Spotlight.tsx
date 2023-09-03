@@ -19,9 +19,8 @@ export default function Spotlight() {
   };
 
   const handleSelectionChange = (searchInput:string) => {
-      // check if there is a match in the healthConditions data array with the typed or selected value
+      // check if there is a match in the healthConditions data array with the typed or selected value to set the condition and blur it
       const matchedCondition = healthConditions.find((condition) => condition.name.toLowerCase() === searchInput?.toLowerCase());
-      // if there is a match with what the user typed and with an item in the healthConditions data array
       if (matchedCondition) {
         blurInputElement()
         setSelectedCondition(matchedCondition.name)
